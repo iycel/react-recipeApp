@@ -7,6 +7,11 @@ const Form = ({ setQuery, getData, mealTypes, setMeal }) => {
     getData();
     // console.log(getData());
   };
+
+  const handleChange = (e) => {
+    return setMeal(e.target.value);
+  };
+
   return (
     <FormContainer onSubmit={handleSubmit}>
       <FoodInput
@@ -15,11 +20,7 @@ const Form = ({ setQuery, getData, mealTypes, setMeal }) => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <Button type="submit">Search</Button>
-      <Select
-        name="mealTypes"
-        id="mealTypes"
-        onChange={(e) => setMeal(e.target.value)}
-      >
+      <Select name="mealTypes" id="mealTypes" onChange={handleChange}>
         {mealTypes.map((item, id) => {
           return (
             <option key={id} value={item.toLowerCase()}>

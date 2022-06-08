@@ -4,8 +4,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [github, setGithub] = useState("");
 
   const openHamburger = () => setOpen(!open);
+
+  const openGithub = () => {
+    return setGithub(
+      (window.location.href = "https://github.com/iycel/react-recipe_app")
+    );
+  };
 
   return (
     <Nav>
@@ -23,10 +30,14 @@ const Navbar = () => {
         <MenuLink onClick={openHamburger} to="/about">
           About
         </MenuLink>
-        <MenuLink onClick={openHamburger} to="/github">
-          Github
+        <MenuLink onClick={openGithub} to={github} target="_blank">
+          Githubb
         </MenuLink>
-        <MenuLink onClick={openHamburger} to="/">
+        <MenuLink
+          onClick={openHamburger}
+          to="/"
+          onMouseUp={() => sessionStorage.clear()}
+        >
           Logout
         </MenuLink>
       </Menu>
