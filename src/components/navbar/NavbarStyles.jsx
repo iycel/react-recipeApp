@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import { ExternalLink } from "react-external-link";
+
 export const Nav = styled.div`
   /* açık yeşil olan navbar */
   padding: 0 2rem;
@@ -10,7 +11,7 @@ export const Nav = styled.div`
   flex-wrap: wrap;
   /* Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz */
   background: #e1f1dd;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   height: 75px;
   font-size: 1.6rem;
 `;

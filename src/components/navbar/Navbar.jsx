@@ -4,7 +4,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   const openHamburger = () => setOpen(!open);
+
   return (
     <Nav>
       <Logo to="/home" onClick={() => setOpen(false)}>
