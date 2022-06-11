@@ -2,6 +2,8 @@ import React from "react";
 import { RecipeImage, RecipeCard, RecipeHeader, Button } from "./HomeStyles";
 import defaultImage from "../../assets/default-image.jpg";
 import { useNavigate } from "react-router-dom";
+
+
 const RecipeCardComp = ({ food }) => {
   // props.recipe si yazmış olduk
   let navigate = useNavigate();

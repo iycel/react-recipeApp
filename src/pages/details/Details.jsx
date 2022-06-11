@@ -9,7 +9,9 @@ import {
   OtherPart,
 } from "./DetailsStyles";
 import dietSvg from "../../assets/diet.svg";
-const Details = () => {
+
+
+const Details = ({food}) => {
   const location = useLocation();
   // geçerli URL'yi temsil eden konum nesnesini döndürür
   const recipe = location.state.food;
