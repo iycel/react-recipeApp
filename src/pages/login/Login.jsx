@@ -10,18 +10,23 @@ import {
   StyledInput,
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
 const Login = () => {
-  // const navigate = useNavigate();
+
+  let navigate = useNavigate();
+
   const user = {
     username: "user",
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     sessionStorage.setItem("user", JSON.stringify(user));
+    navigate("/home", { state: { user } });
 
-    window.location.href = "/home";
+    // window.location.href = "/home";
     // veri göndermeyeceksek bu şekilde sayfaya yönlendirebiliriz
   };
 
